@@ -74,6 +74,7 @@ body {
 }
 
 .header-inner {
+  overflow-x:hidden;
   width: 600px;
   min-width: 40%;
   max-width: 65%;
