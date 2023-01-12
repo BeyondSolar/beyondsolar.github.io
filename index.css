@@ -1,4 +1,4 @@
-/* * { border: 1px solid white; } */
+/**{ border: 1px solid white; } */
 
 * {
   margin: 0px;
@@ -14,7 +14,7 @@ html::-webkit-scrollbar {
 html::-webkit-scrollbar-track {
   background: transparent;
 }
- 
+
 /* Handle */
 html::-webkit-scrollbar-thumb {
   background: #1f1e1e;
@@ -26,25 +26,27 @@ html {
   overflow-x: hidden;
 }
 
-body{
+body {
   background: #070708;
   padding: 0%;
 }
 
-.poly1{
+.poly1 {
   position: fixed;
   left: -3%;
   bottom: 40%;
   z-index: -1;
   width: 20%;
 }
-.poly2{
+
+.poly2 {
   position: fixed;
   left: 25%;
   z-index: -1;
   width: 10%;
 }
-.poly3{
+
+.poly3 {
   position: fixed;
   right: 6%;
   bottom: 5%;
@@ -52,14 +54,14 @@ body{
   z-index: -1;
 }
 
-#cur_page{
+#cur_page {
   text-decoration: underline solid aliceblue;
   text-underline-offset: 0.7rem;
 }
 
 /* Header Navbar */
-.header{
-  z-index: 2;
+.header {
+  z-index: 0;
   top: 0px;
   background-color: #070708;
   display: flex;
@@ -68,10 +70,10 @@ body{
   position: sticky;
   font-size: 1.3rem;
   padding: 10px;
-  border-bottom: 1px solid aliceblue ;
+  border-bottom: 1px solid aliceblue;
 }
 
-.header-inner{
+.header-inner {
   width: 600px;
   min-width: 40%;
   max-width: 65%;
@@ -80,43 +82,45 @@ body{
   align-items: center;
 }
 
-.header-inner a{
+.header-inner a {
   color: aliceblue;
   padding: 10px 5px;
   text-decoration: none;
   transition: 0.2s;
 }
 
-.header-inner a:hover{
+.header-inner a:hover {
   text-decoration: underline solid aliceblue;
   text-underline-offset: 0.7rem;
 }
-.header-inner:hover >:not(:hover){
+
+.header-inner:hover>:not(:hover) {
   opacity: 0.4;
 }
 
-.header img{
+.header img {
   width: 50px;
 }
 
-.header div{
+.header div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.header div p{
+.header div p {
   padding: 10px;
   font-size: 1.5rem;
   font-weight: 550;
 }
 
 /* footer */
-.footer{
+.footer {
   margin: 5rem;
 }
-.footer .container{
+
+.footer .container {
   margin: 20px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,18 +129,19 @@ body{
   gap: 0.5rem;
   width: fit-content;
 }
-.footer *{
+
+.footer * {
   color: aliceblue;
   font-size: 1.2rem;
   letter-spacing: 0.11em;
 }
 
-.footer h2{
+.footer h2 {
   font-size: 3rem;
   text-align: center;
 }
 
-.bot-img{
+.bot-img {
   width: 100%;
   height: 9.3rem;
   position: relative;
@@ -144,54 +149,72 @@ body{
   padding: 0;
   margin: 0;
 }
-@media (width <= 1550px)  {
-  html{
-      font-size: 12px;
+
+@media (width <=1550px) {
+  html {
+    font-size: 12px;
   }
 }
 
-.header .toggle_button{
-  position:absolute;
-  top:2rem;
-  right:2rem;
-  display:none;
+.header .toggle_button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
-  width:30px;
-  height:21px;
+  width: 30px;
+  height: 21px;
+  z-index:2;
 }
 
-.header .toggle_button .bar{
-  height:3px;
-  width:100%;
+.header .toggle_button .bar {
+  height: 3px;
+  width: 100%;
   background-color: white;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
-@media (max-width:850px){
-  .header .toggle_button{
-    display: flex;
+@media (685px <=width <850px) {
+  html {
+    font-size: 10px;
   }
 
   .header{
-    align-items: flex-start;
-    flex-direction: column;
+    z-index:1;
+    
   }
 
-  .header .header-inner{
+  .header .header-inner {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display:none;
-    max-width:100%;
-    min-width:100%;
-    flex-direction:column;
+    position: absolute;
+    z-index:1;
+    width: 200px;
+    height:300px;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+    right: -100px;
+    background: grey;
+    
+    top:0;
+    margin-top:00px;
+    
+    list-style-type: none;
   }
-
   .header .header-inner a{
-    text-decoration:none;
-    text-align: center;
-    padding: .7rem 1rem;
+    display:block;
+    color:white;
   }
 
-  .header .header-inner.active{
-    display:flex;
+  .header .toggle_button {
+    display: flex;
+  }
+
+  .header .header-inner.active {
+    display:block;
   }
 }
+
+@media (width<=685px) {}

@@ -7,6 +7,7 @@
     width: 100%;
     align-items: center;
     margin: 6rem auto;
+    z-index:0;
 }
 .land-image p{
     width: fit-content;
@@ -32,6 +33,7 @@
 }
 .land-image img{
     position: absolute;
+    z-index:inherit;
     width: 44rem;
 }
 
@@ -241,7 +243,7 @@ button:active .button_top {
     .whoweare{
         justify-content: center;
         grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr auto;
         gap: 1rem;
     }
     .whoweare-inner{
@@ -253,6 +255,16 @@ button:active .button_top {
     }
     .ab-c{
         grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr auto;
     }
 }
+
+@media (685px <=width <850px) {
+    html {
+      font-size: 10px;
+    }
+    
+    .land-image{
+        z-index: 0;
+    }
+  }
