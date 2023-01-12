@@ -239,11 +239,11 @@ button:active .button_top {
     height: 1.5rem;
 }
 
-@media (width <= 1550px)  {
+@media (685px<=width <= 1550px)  {
     .whoweare{
         justify-content: center;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
         gap: 1rem;
     }
     .whoweare-inner{
@@ -254,17 +254,44 @@ button:active .button_top {
         display: none;
     }
     .ab-c{
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 }
 
-@media (685px <=width <850px) {
-    html {
-      font-size: 10px;
+@media (width<=685px){
+    .land-image img{
+        width:30rem;
     }
-    
-    .land-image{
-        z-index: 0;
+
+    .land-image p{
+        font-size:7rem;
     }
-  }
+
+    .land-image p:nth-child(4){
+        letter-spacing:0.17em;
+    }
+
+    .whoweare{
+        grid-template-columns:auto;
+        grid-template-rows:1fr 1fr;
+    }
+
+    .dwo h2{
+        font-size:3.2rem;
+    }
+
+    .dwo .dom > div{
+        max-width:70%;
+        font-size:2rem;
+    }
+
+    .ab-c{
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 1fr;
+    }
+
+    .ab-c p{
+        font-size:1.5rem;
+    }
+}
