@@ -221,6 +221,7 @@ body {
     padding-top: 125px;
     right: -100px;
     background: grey;
+    overflow-x:hidden;
     
     top:0;
     margin-top:00px;
@@ -262,6 +263,7 @@ body {
     padding: 50px;
     padding-top: 125px;
     right: -100px;
+    overflow-x:hidden;
     background: grey;
 
     top: 0;
