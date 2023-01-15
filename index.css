@@ -253,23 +253,23 @@ body {
 
   .header .header-inner {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: block;
-    position: absolute;
+    display:block;
+    position: fixed;
     z-index: 1;
-    width: 200px;
+    width: 20px;
     height: 300px;
     margin: -100px 0 0 0;
     padding: 50px;
     padding-top: 125px;
-    right: -300px;
+    left:100%;
     background: linear-gradient(180deg, #55BEC0 0%, #354A64 65.5%, #161B37 93.23%);
     overflow-x:hidden;
-
+    opacity:0;
     top: 0;
     margin-top: 00px;
 
     list-style-type: none;
-    transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: all 1s cubic-bezier(0.77,0.2,0.05,1.0);
     
   }
 
@@ -285,6 +285,8 @@ body {
   }
 
   .header .header-inner.active {
+    right:0px;
+    opacity:1;
     transform:translateX(-200px);
   }
 
