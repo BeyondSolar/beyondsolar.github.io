@@ -74,7 +74,6 @@ body {
 }
 
 .header-inner {
-  overflow-x:hidden;
   width: 600px;
   min-width: 40%;
   max-width: 65%;
@@ -214,12 +213,12 @@ body {
     display:none;
     position: absolute;
     z-index:1;
-    width: 200px;
+    width: 10vw;
     height:300px;
     margin: -100px 0 0 0;
     padding: 50px;
     padding-top: 125px;
-    right: -100px;
+    right: 0px;
     background: grey;
     
     top:0;
@@ -238,7 +237,7 @@ body {
 
   .header .header-inner.active {
     display:block;
-    overflow-x:hidden;
+    overflow-x:auto;
   }
 }
 
@@ -249,12 +248,11 @@ body {
 
   .header {
     z-index: 1;
-
   }
 
   .header .header-inner {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: none;
+    display: block;
     position: absolute;
     z-index: 1;
     width: 200px;
@@ -262,20 +260,23 @@ body {
     margin: -100px 0 0 0;
     padding: 50px;
     padding-top: 125px;
-    right: -100px;
-    background: grey;
+    right: -300px;
+    background: linear-gradient(180deg, #55BEC0 0%, #354A64 65.5%, #161B37 93.23%);
+    overflow-x:hidden;
 
     top: 0;
     margin-top: 00px;
 
     list-style-type: none;
-    transform: translateY(-1em);
-    transition: transform 0.5s ease;
+    transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    
   }
 
   .header .header-inner a {
+    font-family: 'Satoshi';
     display: block;
     color: white;
+    font-size:1.5rem;
   }
 
   .header .toggle_button {
@@ -283,8 +284,7 @@ body {
   }
 
   .header .header-inner.active {
-    display: block;
-    overflow-x:hidden;
+    transform:translateX(-200px);
   }
 
 }
