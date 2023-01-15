@@ -244,11 +244,11 @@ body {
 @media (width<=685px) {
   html {
     font-size: 10px;
+    overflow:hidden;
   }
 
   .header {
     z-index: 1;
-    overflow-x:hidden;
   }
 
   .header .header-inner {
