@@ -6,6 +6,10 @@
   font-family: sans-serif;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html::-webkit-scrollbar {
   width: 9px;
 }
@@ -177,6 +181,10 @@ body {
   html {
     font-size: 12px;
   }
+
+  .header{
+    z-index:1;
+  }
 }
 
 .header .toggle_button {
@@ -201,34 +209,40 @@ body {
 @media (685px <= width <850px) {
   html {
     font-size: 10px;
+    overflow-x:hidden;
   }
 
-  .header{
-    z-index:1;
-    
+  .header {
+    z-index: 1;
   }
 
   .header .header-inner {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display:none;
-    position: absolute;
-    z-index:1;
-    width: 10vw;
-    height:300px;
+    display:block;
+    position: fixed;
+    z-index: 1;
+    width: 50px;
+    height: 300px;
     margin: -100px 0 0 0;
     padding: 50px;
     padding-top: 125px;
-    right: 0px;
-    background: grey;
-    
-    top:0;
-    margin-top:00px;
-    
+    left:100%;
+    background: linear-gradient(180deg, #55BEC0 0%, #354A64 65.5%, #161B37 93.23%);
+    overflow-x:hidden;
+    opacity:0;
+    top: 0;
+    margin-top: 00px;
+
     list-style-type: none;
+    transition: all 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    
   }
-  .header .header-inner a{
-    display:block;
-    color:white;
+
+  .header .header-inner a {
+    font-family: 'Satoshi';
+    display: block;
+    color: white;
+    font-size:1.5rem;
   }
 
   .header .toggle_button {
@@ -236,9 +250,11 @@ body {
   }
 
   .header .header-inner.active {
-    display:block;
-    overflow-x:auto;
+    right:0px;
+    opacity:1;
+    transform:translateX(-250px);
   }
+
 }
 
 @media (width<=685px) {

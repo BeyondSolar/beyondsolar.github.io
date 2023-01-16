@@ -194,6 +194,7 @@
     display: block;
 }
 .contrib a{
+    text-decoration: none;
     width: 100%;
     display: block;
 }
@@ -260,6 +261,8 @@ button:active .button_top {
 }
 
 @media (width<=685px){
+
+    /*landing images*/
     .land-image img{
         width:30rem;
     }
@@ -272,26 +275,55 @@ button:active .button_top {
         letter-spacing:0.17em;
     }
 
+    /*who we are*/
     .whoweare{
         grid-template-columns:auto;
         grid-template-rows:1fr 1fr;
+    }
+    
+
+    /*cards*/
+    .card-container {
+        display:flex;
+        width:100%;
+        overflow-x: scroll;
+        justify-content: left;
+        scroll-snap-type: x mandatory;
+        flex-basis:300px;
+    }
+
+    .card{
+        flex:none;
+        scroll-snap-align: left;
+        width:50vw;
+        margin:0rem 3rem;
+        border-radius: 3px;
+        font-size: 0;
+    }
+
+    /*domains we offer*/
+    .dwo .dom > div{
+        max-width:70%;
+        font-size:2rem;
+        border-radius:3px;
     }
 
     .dwo h2{
         font-size:3.2rem;
     }
 
-    .dwo .dom > div{
-        max-width:70%;
-        font-size:2rem;
-    }
-
+    /*about college*/
     .ab-c{
         grid-template-columns:1fr;
         grid-template-rows:1fr 1fr;
+        border-radius:3px;
     }
 
     .ab-c p{
         font-size:1.5rem;
+    }
+
+    .ab-c img{
+        border-radius:6px;
     }
 }
