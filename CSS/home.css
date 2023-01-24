@@ -1,5 +1,28 @@
 /* * { border: 1px solid white; } */
 
+/* .poly1{
+    position: absolute;
+    left: -4.8rem;
+    top: 8rem;
+    z-index: -1;
+    width: 25%;
+  }
+  .poly2{
+    position: absolute;
+    z-index: -1;
+    width: 10%;
+    right: 5%;
+    top: 2rem;
+  }
+  .poly3{
+    display: none;
+    position: absolute;
+    right: 17%;
+    top: 115vh;
+    width: 25%;
+    z-index: -1;
+  } */
+
 .land-image{
     display: flex;
     flex-direction: column;
@@ -7,7 +30,6 @@
     width: 100%;
     align-items: center;
     margin: 6rem auto;
-    z-index:0;
 }
 .land-image p{
     width: fit-content;
@@ -33,7 +55,6 @@
 }
 .land-image img{
     position: absolute;
-    z-index:inherit;
     width: 44rem;
 }
 
@@ -79,6 +100,7 @@
 }
 .whoweare-inner p{
     font-family: satoshi;
+    text-align: justify;
 }
 
 /* AR VR MR Cards */
@@ -95,6 +117,8 @@
 
 .card{
     background: linear-gradient(180deg, #0D9C81 14.18%, rgba(76, 21, 203, 0.13) 100%);
+    /* background: linear-gradient(180deg, #55BEC0 0%, #354A64 65.5%, #161B37 93.23%); */
+    background: linear-gradient(180deg, rgba(85, 190, 192, 0.8) 14.18%, rgba(53, 74, 100, 0.478906) 65.58%, rgba(22, 27, 55, 0.2) 97.32%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(14px);
     border-radius: 34px;
@@ -143,7 +167,7 @@
     color: #4C15CB;
     border: 5px solid #4C15CB;
     border-radius: 34px;
-    background-image: url("../assets/bg-marble.png");
+    background-image: url("../assets/Home/bg-marble.png");
 }
 .dom1{
     
@@ -188,13 +212,17 @@
     width: 100%;
     overflow: hidden;
     border-radius: 36px;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+.ab-c img:hover{
+    transform: translateY(-0.2rem);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 50px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .contrib{
     width: 100%;
     display: block;
 }
 .contrib a{
-    text-decoration: none;
     width: 100%;
     display: block;
 }
@@ -240,7 +268,7 @@ button:active .button_top {
     height: 1.5rem;
 }
 
-@media (685px<=width <= 1550px)  {
+@media (851px<= width <= 1550px)  {
     .whoweare{
         justify-content: center;
         grid-template-columns: 1fr 1fr;
@@ -257,6 +285,26 @@ button:active .button_top {
     .ab-c{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
+    }
+}
+
+@media (685px <=width <= 850px)  {
+    .whoweare{
+        justify-content: center;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+    }
+    .whoweare-inner{
+        text-align: center;
+        line-height: 2rem;
+    }
+    .box{
+        display: none;
+    }
+    .ab-c{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
     }
 }
 
@@ -280,7 +328,14 @@ button:active .button_top {
         grid-template-columns:auto;
         grid-template-rows:1fr 1fr;
     }
+
+    .whoweare-inner{
+        text-align: center;
+    }
     
+    .whoweare-inner p{
+        text-align:justify;
+    }
 
     /*cards*/
     .card-container {
@@ -297,7 +352,6 @@ button:active .button_top {
         scroll-snap-align: left;
         width:50vw;
         margin:0rem 3rem;
-        border-radius: 3px;
         font-size: 0;
     }
 
@@ -305,7 +359,6 @@ button:active .button_top {
     .dwo .dom > div{
         max-width:70%;
         font-size:2rem;
-        border-radius:3px;
     }
 
     .dwo h2{
@@ -316,14 +369,10 @@ button:active .button_top {
     .ab-c{
         grid-template-columns:1fr;
         grid-template-rows:1fr 1fr;
-        border-radius:3px;
     }
 
     .ab-c p{
         font-size:1.5rem;
     }
 
-    .ab-c img{
-        border-radius:6px;
-    }
 }
